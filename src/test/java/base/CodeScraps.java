@@ -1,4 +1,4 @@
-package automation.tests.base;
+package base;
 
 import Utils.CsvHelper;
 import com.opencsv.exceptions.CsvException;
