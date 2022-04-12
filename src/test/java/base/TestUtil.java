@@ -29,7 +29,7 @@ public class TestUtil {
     }
 
     private void setupBrowserDriver(){
-        try (FileInputStream configFile = new FileInputStream("src/resources/config.properties")){
+        try (FileInputStream configFile = new FileInputStream("src/test/resources/config.properties")){
             Properties config = new Properties();
             config.load(configFile);
             url = config.getProperty("urlAddress");
@@ -52,8 +52,6 @@ public class TestUtil {
                 throw new IllegalStateException("Unsupported browser type");
         }
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
     }
 
     private void loadUrl(String url){
